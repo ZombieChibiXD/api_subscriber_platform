@@ -1,0 +1,2231 @@
+{
+	"info": {
+		"_postman_id": "06654646-927e-4c2f-87b7-9658bf198f4b",
+		"name": "API Subscriber Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Routes",
+			"item": [
+				{
+					"name": "Create User account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Michele\",\r\n  \"email\": \"mails@mailinator.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User account",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Michele\",\r\n  \"email\": \"mails@mailinator.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/users",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:38:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:38:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Michele\",\n    \"email\": \"mails@mailinator.com\",\n    \"updated_at\": \"2022-04-21T08:38:20.000000Z\",\n    \"created_at\": \"2022-04-21T08:38:20.000000Z\",\n    \"id\": 8\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Michael\",\r\n  \"email\": \"mails@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User account",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Michael\",\r\n  \"email\": \"mails@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/users/8",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:38:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:38:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"name\": \"Michael\",\n    \"email\": \"mails@mail.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2022-04-21T08:38:20.000000Z\",\n    \"updated_at\": \"2022-04-21T08:38:49.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show User Account By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/users/8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show User Account By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/users/8",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"name\": \"Michael\",\n    \"email\": \"mails@mail.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2022-04-21T08:38:20.000000Z\",\n    \"updated_at\": \"2022-04-21T08:38:49.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show User Account By Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"mails@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show User Account By Email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"mails@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/users/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"name\": \"Michael\",\n    \"email\": \"mails@mail.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2022-04-21T08:38:20.000000Z\",\n    \"updated_at\": \"2022-04-21T08:38:49.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User Account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Michael\",\r\n  \"email\": \"mail@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User Account",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Michael\",\r\n  \"email\": \"mail@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/users/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:39:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Michele\",\n        \"email\": \"mail@mailinator.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-04-21T07:05:28.000000Z\",\n        \"updated_at\": \"2022-04-21T07:05:28.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Website Routes",
+			"item": [
+				{
+					"name": "Show Websites",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/websites/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Websites",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/websites/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:40:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:40:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"MyNewsNetwork\",\n        \"url\": \"MyNewsNetwork.com\",\n        \"description\": \"Delivers your news fresh as it's told\",\n        \"category\": \"News, World\",\n        \"user_id\": 5,\n        \"created_at\": \"2022-04-21T07:34:21.000000Z\",\n        \"updated_at\": \"2022-04-21T07:34:21.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Website",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"MyNewsNetwork2\",\r\n  \"url\": \"MyNewsNetwork2.com\",\r\n  \"description\": \"Delivers your news fresh as it's told\",\r\n  \"category\": \"News, World\",\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Website",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"MyNewsNetwork2\",\r\n  \"url\": \"MyNewsNetwork2.com\",\r\n  \"description\": \"Delivers your news fresh as it's told\",\r\n  \"category\": \"News, World\",\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:41:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:41:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"MyNewsNetwork2\",\n    \"url\": \"MyNewsNetwork2.com\",\n    \"description\": \"Delivers your news fresh as it's told\",\n    \"category\": \"News, World\",\n    \"user_id\": 9,\n    \"updated_at\": \"2022-04-21T08:41:04.000000Z\",\n    \"created_at\": \"2022-04-21T08:41:04.000000Z\",\n    \"id\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Website By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/websites/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Website By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/websites/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:41:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:41:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"MyNewsNetwork2\",\n    \"url\": \"MyNewsNetwork2.com\",\n    \"description\": \"Delivers your news fresh as it's told\",\n    \"category\": \"News, World\",\n    \"user_id\": 9,\n    \"created_at\": \"2022-04-21T08:41:04.000000Z\",\n    \"updated_at\": \"2022-04-21T08:41:04.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Website",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"MyNewsNetwork 2\",\r\n  \"url\": \"MyNewsNetwork2.com\",\r\n  \"description\": \"Delivers your news fresh as it's told\",\r\n  \"category\": \"News, World\",\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Website",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"MyNewsNetwork 2\",\r\n  \"url\": \"MyNewsNetwork2.com\",\r\n  \"description\": \"Delivers your news fresh as it's told\",\r\n  \"category\": \"News, World\",\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"MyNewsNetwork 2\",\n    \"url\": \"MyNewsNetwork2.com\",\n    \"description\": \"Delivers your news fresh as it's told\",\n    \"category\": \"News, World\",\n    \"user_id\": 9,\n    \"created_at\": \"2022-04-21T08:41:04.000000Z\",\n    \"updated_at\": \"2022-04-21T08:42:05.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Website",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Website",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork2.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Website has been deleted.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts Route",
+			"item": [
+				{
+					"name": "Show Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/websites/2/posts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/websites/2/posts",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [],\n    \"first_page_url\": \"http://localhost:8000/api/websites/2/posts?page=1\",\n    \"from\": null,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:8000/api/websites/2/posts?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/websites/2/posts?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:8000/api/websites/2/posts\",\n    \"per_page\": 10,\n    \"prev_page_url\": null,\n    \"to\": null,\n    \"total\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"My 2nd post title\",\r\n  \"tags\": \"World news, Incident\",\r\n  \"url\": \"http://www.MyNewsNetwork.com/url\",\r\n  \"content\": \"This is the first post ever on this website\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/posts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"My 2nd post title\",\r\n  \"tags\": \"World news, Incident\",\r\n  \"url\": \"http://www.MyNewsNetwork.com/url\",\r\n  \"content\": \"This is the first post ever on this website\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/posts",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:42:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"My 2nd post title\",\n    \"tags\": \"World news, Incident\",\n    \"url\": \"http://www.MyNewsNetwork.com/url\",\n    \"content\": \"This is the first post ever on this website\",\n    \"website_id\": 2,\n    \"updated_at\": \"2022-04-21T08:42:51.000000Z\",\n    \"created_at\": \"2022-04-21T08:42:51.000000Z\",\n    \"id\": 2,\n    \"website\": {\n        \"id\": 2,\n        \"name\": \"MyNewsNetwork\",\n        \"url\": \"MyNewsNetwork.com\",\n        \"description\": \"Delivers your news fresh as it's told\",\n        \"category\": \"News, World\",\n        \"user_id\": 5,\n        \"created_at\": \"2022-04-21T07:34:21.000000Z\",\n        \"updated_at\": \"2022-04-21T07:34:21.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Post By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/websites/2/posts/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Post By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/websites/2/posts/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"website_id\": 2,\n    \"title\": \"My 2nd post title\",\n    \"tags\": \"World news, Incident\",\n    \"url\": \"http://www.MyNewsNetwork.com/url\",\n    \"content\": \"This is the first post ever on this website\",\n    \"created_at\": \"2022-04-21T08:42:51.000000Z\",\n    \"updated_at\": \"2022-04-21T08:42:51.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"My first post title 2\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/posts/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Post",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"My first post title 2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/posts/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"website_id\": 2,\n    \"title\": \"My first post title 2\",\n    \"tags\": \"World news, Incident\",\n    \"url\": \"http://www.MyNewsNetwork.com/url\",\n    \"content\": \"This is the first post ever on this website\",\n    \"created_at\": \"2022-04-21T08:42:51.000000Z\",\n    \"updated_at\": \"2022-04-21T08:43:23.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/posts/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/posts/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:33 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:43:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"website_id\": 2,\n    \"title\": \"My first post title 2\",\n    \"tags\": \"World news, Incident\",\n    \"url\": \"http://www.MyNewsNetwork.com/url\",\n    \"content\": \"This is the first post ever on this website\",\n    \"created_at\": \"2022-04-21T08:42:51.000000Z\",\n    \"updated_at\": \"2022-04-21T08:43:23.000000Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscription Route",
+			"item": [
+				{
+					"name": "Subscribe to Website",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/subscribe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"subscribe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Subscribe to Website",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/subscribe",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"subscribe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": 10,\n    \"website_id\": 2,\n    \"updated_at\": \"2022-04-21T08:44:01.000000Z\",\n    \"created_at\": \"2022-04-21T08:44:01.000000Z\",\n    \"id\": 3,\n    \"user\": {\n        \"name\": \"joes@mail.com\",\n        \"email\": \"joes@mail.com\",\n        \"updated_at\": \"2022-04-21T08:44:01.000000Z\",\n        \"created_at\": \"2022-04-21T08:44:01.000000Z\",\n        \"id\": 10\n    },\n    \"website\": {\n        \"id\": 2,\n        \"name\": \"MyNewsNetwork\",\n        \"url\": \"MyNewsNetwork.com\",\n        \"description\": \"Delivers your news fresh as it's told\",\n        \"category\": \"News, World\",\n        \"user_id\": 5,\n        \"created_at\": \"2022-04-21T07:34:21.000000Z\",\n        \"updated_at\": \"2022-04-21T07:34:21.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Check Website Subscription",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/subscribed",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"subscribed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check Website Subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/subscribed",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"subscribed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"user_id\": 10,\n    \"website_id\": 2,\n    \"created_at\": \"2022-04-21T08:44:01.000000Z\",\n    \"updated_at\": \"2022-04-21T08:44:01.000000Z\",\n    \"user\": {\n        \"id\": 10,\n        \"name\": \"joes@mail.com\",\n        \"email\": \"joes@mail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-04-21T08:44:01.000000Z\",\n        \"updated_at\": \"2022-04-21T08:44:01.000000Z\"\n    },\n    \"website\": {\n        \"id\": 2,\n        \"name\": \"MyNewsNetwork\",\n        \"url\": \"MyNewsNetwork.com\",\n        \"description\": \"Delivers your news fresh as it's told\",\n        \"category\": \"News, World\",\n        \"user_id\": 5,\n        \"created_at\": \"2022-04-21T07:34:21.000000Z\",\n        \"updated_at\": \"2022-04-21T07:34:21.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Unsubscribe Website",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/unsubscribe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"unsubscribe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unsubscribe Website",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"joes@mail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/unsubscribe",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"unsubscribe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User have stopped subscribing to this website.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Website Subscribers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/websites/2/subscribers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"websites",
+								"2",
+								"subscribers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Website Subscribers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"publisher@mynewsnetwork.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{URL}}/api/websites/2/subscribers",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"websites",
+										"2",
+										"subscribers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Apr 2022 08:44:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.28"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000"
+		}
+	]
+}
