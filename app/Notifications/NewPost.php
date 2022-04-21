@@ -4,10 +4,11 @@ namespace App\Notifications;
 
 use App\Models\Post;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewPost extends Notification
+class NewPost extends Notification implements ShouldQueue
 {
     use Queueable;
 
