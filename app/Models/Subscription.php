@@ -9,11 +9,9 @@ class Subscription extends Model
 {
     use HasFactory;
 
-    public $id;
-
-    public $user_id;
-
-    public $website_id;
+    // public $id;
+    // public $user_id;
+    // public $website_id;
 
 
     public function user()

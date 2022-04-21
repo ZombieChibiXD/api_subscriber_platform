@@ -9,21 +9,14 @@ class Post extends Model
 {
     use HasFactory;
 
-    public $id;
-
-    public $website_id;
-
-    public $title;
-
-    public $tags;
-
-    public $url;
-
-    public $content;
-
-    public $created_at;
-
-    public $updated_at;
+    // public $id;
+    // public $website_id;
+    // public $title;
+    // public $tags;
+    // public $url;
+    // public $content;
+    // public $created_at;
+    // public $updated_at;
 
     /**
      * The attributes that should be cast to native types.

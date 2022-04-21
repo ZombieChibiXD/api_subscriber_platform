@@ -9,21 +9,14 @@ class Website extends Model
 {
     use HasFactory;
 
-    public $id;
-
-    public $name;
-
-    public $url;
-
-    public $description;
-
-    public $category;
-
-    public $user_id;
-
-    public $created_at;
-
-    public $updated_at;
+    // public $id;
+    // public $name;
+    // public $url;
+    // public $description;
+    // public $category;
+    // public $user_id;
+    // public $created_at;
+    // public $updated_at;
 
     /**
      * The attributes should be cast to native types.

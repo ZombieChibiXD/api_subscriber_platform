@@ -10,17 +10,12 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    public $id;
-
-    public $name;
-
-    public $email;
-
-    public $email_verified_at;
-
-    public $created_at;
-
-    public $updated_at;
+    // public $id;
+    // public $name;
+    // public $email;
+    // public $email_verified_at;
+    // public $created_at;
+    // public $updated_at;
 
     /**
      * The attributes that are mass assignable.
