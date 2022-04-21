@@ -24,3 +24,8 @@ php artisan migrate --seed
 It's included as the file `API Subscriber Platform.postman_collection.json` in the root directory of the repository. Using Postman v.2.1
 
 
+
+# Command
+```
+php artisan subscribers:mail
+```
