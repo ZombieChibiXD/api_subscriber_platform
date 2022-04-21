@@ -47,7 +47,14 @@ class Website extends Model
 
     public function subscribers()
     {
-        return $this->hasManyThrough(Subscription::class, User::class);
+        return $this->hasManyThrough(
+            User::class,
+            Subscription::class,
+            'website_id',
+            'id',
+            'id',
+            'user_id'
+        );
     }
 
 

@@ -20,7 +20,7 @@ class SubscriptionController extends Controller
     {
         // Validate the request
         $form = $request->validate([
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
         ]);
 
         $user = UserController::findUserByEmailOrCreate($form['email']);
@@ -49,17 +49,20 @@ class SubscriptionController extends Controller
     {
         // Validate the request
         $form = $request->validate([
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|exists:users,email',
         ]);
 
-        $user = User::findOrFail($form['email']);
+        $user = User::where('email', $form['email'])->first();
 
-        $subscription = $user->subscriptions()->where('website_id', $website->id)->first();
+        $subscription = Subscription::where('user_id', $user->id)
+            ->where('website_id', $website->id)
+            ->first();
 
         if ($subscription) {
+            $subscription->load('user', 'website');
             return response()->json($subscription);
         } else {
-            return response()->json(['message' => 'User is not subscribed to this website.']);
+            return response()->json(['message' => 'User is not subscribed to this website.'], 404);
         }
     }
 
@@ -74,12 +77,14 @@ class SubscriptionController extends Controller
     {
         // Validate the request
         $form = $request->validate([
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|exists:users,email',
         ]);
 
-        $user = User::findOrFail($form['email']);
+        $user = User::where('email', $form['email'])->first();
 
-        $subscription = $user->subscriptions()->where('website_id', $website->id)->first();
+        $subscription = Subscription::where('user_id', $user->id)
+        ->where('website_id', $website->id)
+        ->first();
 
         if ($subscription) {
             $subscription->delete();
@@ -87,5 +92,27 @@ class SubscriptionController extends Controller
         } else {
             return response()->json(['message' => 'User is not subscribed to this website.']);
         }
+    }
+
+    /**
+     * Index route. Used to get list of subscribers.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Models\Website $website
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request, Website $website)
+    {
+        $form = $request->validate([
+            'email' => 'required|email|exists:users,email',
+        ]);
+
+        $user = User::where('email', $form['email'])->first();
+
+        if ($user->id == $website->user_id) {
+            $subscriptions = $website->subscribers()->get();
+            return response()->json($subscriptions);
+        }
+        return response()->json(['message' => 'User is not the owner of this website.']);
     }
 }
