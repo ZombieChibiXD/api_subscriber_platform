@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Post;
+use App\Notifications\NewPost;
 
 class PostObserver
 {
@@ -14,7 +15,7 @@ class PostObserver
      */
     public function created(Post $post)
     {
-        //
+        $newPostNotification = new NewPost($post);
     }
 
     /**
