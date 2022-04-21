@@ -73,22 +73,67 @@ class WebsiteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Models\Website $website
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Website $website)
     {
-        //
+        // Validate the request
+        $form = $request->validate([
+            'name' => 'required|string|max:255',
+            'url' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'category' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
+        ]);
+
+        $user = User::findOrFail($form['email']);
+
+        // If user is not the owner of the website, return error
+        if ($user->id !== $website->user_id) {
+            return response()->json(['message' => 'User is not the owner of this website.']);
+        }
+
+
+        // Update the website
+        $website->name = $form['name'];
+        $website->url = $form['url'];
+        $website->description = $form['description'];
+        $website->category = $form['category'];
+
+        // Save the website
+        $website->save();
+
+        return response()->json($website);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        // Validate the request
+        $form = $request->validate([
+            'id' => 'required|integer',
+            'email' => 'required|string|max:255',
+        ]);
+
+        // Find the website
+        $website = Website::find($form['id']);
+
+        $user = User::findOrFail($form['email']);
+
+        // If user is not the owner of the website, return error
+        if ($user->id !== $website->user_id) {
+            return response()->json(['message' => 'User is not the owner of this website.']);
+        }
+
+        // Delete the website
+        $website->delete();
+
+        return response()->json(['message' => 'Website has been deleted.']);
     }
 }
