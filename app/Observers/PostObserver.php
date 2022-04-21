@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\Post;
 use App\Notifications\NewPost;
+use Illuminate\Support\Facades\Notification;
 
 class PostObserver
 {
@@ -15,7 +16,11 @@ class PostObserver
      */
     public function created(Post $post)
     {
+
         $newPostNotification = new NewPost($post);
+        $website_subscribers = $post->website->subscribers;
+
+        Notification::send($website_subscribers, $newPostNotification);
     }
 
     /**
