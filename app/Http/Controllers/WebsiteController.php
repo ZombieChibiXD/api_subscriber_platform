@@ -34,7 +34,7 @@ class WebsiteController extends Controller
             'url' => 'required|string|max:255',
             'description' => 'required|string|max:255',
             'category' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
         ]);
 
         // Create a new website
@@ -59,13 +59,11 @@ class WebsiteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \Models\Website $website
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Website $website)
     {
-        $website = Website::find($id);
-
         return response()->json($website);
     }
 
@@ -84,14 +82,18 @@ class WebsiteController extends Controller
             'url' => 'required|string|max:255',
             'description' => 'required|string|max:255',
             'category' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|max:255|exists:users,email',
         ]);
 
-        $user = User::findOrFail($form['email']);
+        $user = User::where('email', $form['email'])->first();
+
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
 
         // If user is not the owner of the website, return error
         if ($user->id !== $website->user_id) {
-            return response()->json(['message' => 'User is not the owner of this website.']);
+            return response()->json(['message' => 'User is not the owner of this website.'], 403);
         }
 
 
@@ -111,20 +113,19 @@ class WebsiteController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  \Models\Website $website
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request, Website $website)
     {
         // Validate the request
+        // Email must belong to a user
         $form = $request->validate([
-            'id' => 'required|integer',
-            'email' => 'required|string|max:255',
+            'email' => 'required|email|max:255|exists:users,email',
         ]);
 
-        // Find the website
-        $website = Website::find($form['id']);
-
-        $user = User::findOrFail($form['email']);
+        // Find the user
+        $user = User::where('email', $form['email'])->first();
 
         // If user is not the owner of the website, return error
         if ($user->id !== $website->user_id) {
@@ -136,4 +137,24 @@ class WebsiteController extends Controller
 
         return response()->json(['message' => 'Website has been deleted.']);
     }
+
+
+    /**
+     * Create route. Not allowed for public
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return response()->json(['message' => 'Not allowed'], 403);
+    }
+
+    /**
+     * Edit route. Not allowed for public
+     * @return \Illuminate\Http\Response
+     */
+    public function edit()
+    {
+        return response()->json(['message' => 'Not allowed'], 403);
+    }
+
 }
